@@ -1,7 +1,25 @@
+:root {
+    --primary-color: black;
+    --primary-background-color: white;
+    --primary-heading-color: #2e2f42;
+}
+
 body {
     font-family: "Roboto", sans-serif;
-    color: #212121;
-    background-color: #ffffff;
+    color: var(--primary-color);
+    background-color: var(--primary-background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* initial css */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-heading-color);
 }
 
 a {
@@ -9,5 +27,48 @@ a {
 }
 
 ul, ol {
-    list-style-type: none;
+    list-style: none;
 }
+
+/*-- region Header --*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    border: 2px solid darkred;
+}
+.logo {
+    font-family: "Raleway", sans-serif;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.logo-web {
+    color: #4d5ae5;
+}
+.menu {
+    display: flex;
+}
+.menu a {
+    margin-left: 40px;
+}
+.menu:first-child {
+    margin-left: 76px;
+}
+.menu a {
+    font-size: 16px;
+    font-weight: 500;
+}
+.contacts {
+    display: flex;
+}
+/*-- end Header --*/
+/*-- region Hero --*/
+.hero {
+    height: 600px;
+    background-color: #2e2f42;
+    border: 2px solid yellowgreen;
+}
+/*-- end Hero --*/
