@@ -1,8 +1,9 @@
 :root {
-    --primary-color: black;
-    --primary-background-color: white;
+    --primary-color: #000000;
+    --primary-background-color: #ffffff;
     --primary-heading-color: #2e2f42;
     --primary-button-background-color: #4d5ae5;
+    --primary-heading-hover-color: #404bbf;
 }
 
 body {
@@ -32,6 +33,7 @@ ul, ol {
 }
 
 .page {
+    margin: 0 auto;
     max-width: 1440px;
 }
 
@@ -68,20 +70,23 @@ ul, ol {
     display: flex;
 }
 .nav-menu a {
+    color: var(--primary-heading-color);
     margin-left: 40px;
+    font-size: 16px;
+    font-weight: 500;
 }
 .nav-menu:first-child {
     margin-left: 76px;
 }
-.nav-menu a {
-    font-size: 16px;
-    font-weight: 500;
+.nav-menu a:hover {
+    color: var(--primary-heading-color);
 }
 .contacts {
     display: flex;
 }
 .contacts a {
     margin-right: 40px;
+    /*color:*/
     font-style: normal;
     line-height: 24px;
 }
@@ -112,7 +117,7 @@ ul, ol {
 }
 .hero-order-button {
     color: white;
-    background-color: #404bbf;
+    background-color: var(--primary-heading-hover-color);
     width: 169px;
     height: 56px;
     border: none;
