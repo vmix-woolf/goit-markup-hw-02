@@ -2,6 +2,7 @@
     --primary-color: black;
     --primary-background-color: white;
     --primary-heading-color: #2e2f42;
+    --primary-button-background-color: #4d5ae5;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     background-color: var(--primary-background-color);
     margin: 0;
     padding: 0;
+    max-width: 1440px
 }
 
 /* initial css */
@@ -46,7 +48,7 @@ ul, ol {
     text-transform: uppercase;
 }
 .logo-web {
-    color: #4d5ae5;
+    color: var(--primary-button-background-color);
 }
 .menu {
     display: flex;
@@ -69,6 +71,34 @@ ul, ol {
 .hero {
     height: 600px;
     background-color: #2e2f42;
-    border: 2px solid yellowgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* Выравниваем заголовок и кнопку по центру */
+    text-align: center;
+}
+.hero-slogan-heading {
+    color: white;
+    font-size: 56px;
+    font-weight: 700;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 35%;
+}
+.hero-order-button {
+    color: white;
+    background-color: #404bbf;
+    width: 169px;
+    height: 56px;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    margin-top: 48px;
+    cursor: pointer;
+}
+.hero-order-btn:hover {
+    background-color: var(--primary-button-background-color);
 }
 /*-- end Hero --*/
