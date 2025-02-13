@@ -11,7 +11,6 @@ body {
     background-color: var(--primary-background-color);
     margin: 0;
     padding: 0;
-    max-width: 1440px
 }
 
 /* initial css */
@@ -29,7 +28,11 @@ a {
 }
 
 ul, ol {
-    list-style: none;
+    list-style-type: none;
+}
+
+.page {
+    max-width: 1440px;
 }
 
 /*-- region Header --*/
@@ -40,49 +43,71 @@ ul, ol {
     height: 72px;
     border: 2px solid darkred;
 }
-.logo {
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 156px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.nav-logo {
     font-family: "Raleway", sans-serif;
     color: inherit;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
+    display: flex;
+    align-items: center; /* Центрируем текст */
+    height: 100%; /* Растягиваем по высоте */
 }
-.logo-web {
+.nav-logo-web {
     color: var(--primary-button-background-color);
 }
-.menu {
+.nav-menu {
     display: flex;
 }
-.menu a {
+.nav-menu a {
     margin-left: 40px;
 }
-.menu:first-child {
+.nav-menu:first-child {
     margin-left: 76px;
 }
-.menu a {
+.nav-menu a {
     font-size: 16px;
     font-weight: 500;
 }
 .contacts {
     display: flex;
 }
+.contacts a {
+    margin-right: 40px;
+    font-style: normal;
+    line-height: 24px;
+}
+.contacts a:hover {
+    color: #404bbf;
+}
 /*-- end Header --*/
+
 /*-- region Hero --*/
 .hero {
     height: 600px;
     background-color: #2e2f42;
     display: flex;
     flex-direction: column;
-    align-items: center;        /* Выравниваем заголовок и кнопку по центру */
+    align-items: center;
     text-align: center;
+    justify-content: center;
+
 }
 .hero-slogan-heading {
     color: white;
     font-size: 56px;
     font-weight: 700;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    /*align-items: center;*/
+    /*text-align: center;*/
     max-width: 35%;
 }
 .hero-order-button {
@@ -102,3 +127,19 @@ ul, ol {
     background-color: var(--primary-button-background-color);
 }
 /*-- end Hero --*/
+/*-- region Features --*/
+.features {
+    width: 1128px;
+    height: 104px;
+}
+.features-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 264px;
+    word-wrap: break-word;       /* Разрыв слов, если они слишком длинные */
+    overflow-wrap: break-word;   /* Альтернативный способ разрыва */
+    white-space: normal;         /* Разрешаем перенос строк */
+    background: none;            /* Бокс без видимых границ */
+}
+/*-- end Features --*/
